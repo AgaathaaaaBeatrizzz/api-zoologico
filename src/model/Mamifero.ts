@@ -8,4 +8,12 @@ class Mamifero extends Animal {
         super(_nome, _idade, _genero);
         this.raca = _raca;
     }
+    public setRaca(raca: string): void {
+        this.raca = raca;
+    }
+
+    public getRaca(): string {
+        return this.raca;
+        
+    }
 }
