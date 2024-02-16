@@ -1,21 +1,64 @@
 import { Animal } from "./Animal";
 
-export class Ave extends Animal{
-    private envergatura: number;
+/**
+ * Representa um habitat no zoológico, onde os animais vivem.
+ */
+export class Habitat {
 
-    constructor(_nome: string,
-                _idade: number,
-                _genero: string,
-                _envergatura: number,){
-         super(_nome,_idade,_genero);
-        this.envergatura= _envergatura;
-     }
+    /**
+     * O nome do habitat.
+     */
+    private nome: string;
 
-     public setEnvergatura(envergatura: number): void {
-        this.envergatura = envergatura;
-     }
+    /**
+     * A lista de animais que habitam este habitat.
+     */
+    private listaAnimais: Array<Animal>;
 
-     public getEnvergatura(): number {
-        return this.envergatura;
-     }
+    /**
+     * Cria uma nova instância de Habitat.
+     * 
+     * @param _nome O nome do habitat.
+     * @param _listaAnimais A lista de animais que habitam o habitat.
+     */
+    constructor(_nome: string, _listaAnimais: Array<Animal>) {
+        this.nome = _nome;
+        this.listaAnimais = _listaAnimais;
+    }
+
+    /**
+     * Obtém o nome do habitat.
+     * 
+     * @returns O nome do habitat.
+     */
+    public getNome(): string {
+        return this.nome;
+    }
+
+    /**
+     * Define o nome do habitat.
+     * 
+     * @param _nome O nome a ser atribuído ao habitat.
+     */
+    public setNome(_nome: string): void {
+        this.nome = _nome;
+    }
+
+    /**
+     * Obtém a lista de animais do habitat.
+     * 
+     * @returns A lista de animais do habitat.
+     */
+    public getListaAnimais(): Array<Animal> {
+        return this.listaAnimais;
+    }
+
+    /**
+     * Define a lista de animais do habitat.
+     * 
+     * @param _listaAnimais A lista de animais a ser atribuída ao habitat.
+     */
+    public setListaAnimais(_listaAnimais: Array<Animal>): void {
+        this.listaAnimais = _listaAnimais;
+    }
 }

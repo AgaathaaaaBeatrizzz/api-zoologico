@@ -1,26 +1,63 @@
 import { Atracao } from "./Atracao";
 
+/**
+ * Classe que representa um zoológico, contendo informações sobre seu nome e a lista de atrações disponíveis.
+ */
 export class Zoologico {
+    /**
+     * Nome do zoológico.
+     */
     private nome: string;
-    private lista_de_atrações: Atracao
 
-    constructor(_nome: string, _lista_de_atrações: Atracao){
+    /**
+     * Lista de atrações disponíveis no zoológico.
+     */
+    private listaDeAtracoes: Atracao;
+
+    /**
+     * Construtor da classe Zoologico.
+     * 
+     * @param _nome O nome do zoológico.
+     * @param _listaDeAtracoes A lista de atrações disponíveis no zoológico.
+     */
+    constructor(_nome: string, _listaDeAtracoes: Atracao) {
         this.nome = _nome;
-        this.lista_de_atrações = _lista_de_atrações;
+        this.listaDeAtracoes = _listaDeAtracoes;
     }
 
-    public setNome(nome: string): void {
-        this.nome = nome;
-    }
-
+    /**
+     * Obtém o nome do zoológico.
+     * 
+     * @returns O nome do zoológico.
+     */
     public getNome(): string {
         return this.nome;
     }
 
-    public setLista_de_atrações(lista_de_atrações: Atracao):void{
-        this.lista_de_atrações = lista_de_atrações;
+    /**
+     * Define o nome do zoológico.
+     * 
+     * @param _nome O nome a ser atribuído ao zoológico.
+     */
+    public setNome(_nome: string): void {
+        this.nome = _nome;
     }
-    public getLista_de_atrações():Atracao{
-        return this.lista_de_atrações
+
+    /**
+     * Obtém a lista de atrações do zoológico.
+     * 
+     * @returns A lista de atrações do zoológico.
+     */
+    public getListaDeAtracoes(): Atracao {
+        return this.listaDeAtracoes;
+    }
+
+    /**
+     * Define a lista de atrações do zoológico.
+     * 
+     * @param _listaDeAtracoes A lista de atrações a ser atribuída ao zoológico.
+     */
+    public setListaDeAtracoes(_listaDeAtracoes: Atracao): void {
+        this.listaDeAtracoes = _listaDeAtracoes;
     }
 }
